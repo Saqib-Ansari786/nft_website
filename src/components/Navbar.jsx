@@ -1,16 +1,15 @@
 import { useState } from "react";
 import { BiMenu, BiXCircle, BiHome } from "react-icons/bi";
 import { Link } from "react-router-dom";
-
+import logo from "../assets/logo.png";
 export default function Navbar() {
   const [active, setActive] = useState(true);
 
   return (
-    <nav className=" text-white px-2 sm:px-2 py-2.5 border-b border-b-gray-700">
+    <nav className=" text-white px-2 sm:px-2 py-2.5 border-b border-b-gray-700 flex-wrap">
       <div className="container flex flex-wrap justify-between items-center mx-auto">
         <div className="flex flex-row gap-6 items-center">
-          <h1 className="font-bold tracking-widest text-xl">ARTSWAP</h1>
-          {/* <img src={logo} className="bg-cover h-16 w-36" /> */}
+          <img src={logo} className="bg-cover h-8 w-38" />
           <button className="rounded-full border border-gray-700 p-2 hover:bg-slate-700">
             <Link to="/">
               <BiHome size={20} />
