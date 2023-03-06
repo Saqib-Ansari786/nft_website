@@ -11,7 +11,6 @@ const CatogeryButton = ({ title, children, onclick }) => {
     >
       <span>{title}</span>
       {children}
-      <BiFilterAlt size={20} />
     </button>
   );
 };
@@ -27,56 +26,69 @@ const DetailCollection = (props) => {
         <span className="">{props.name}</span>
       </div>
       <div className="flex items-center  justify-between md:justify-center w-full md:w-56  py-2 px-3">
-        <span className="md:hidden">listings</span>
+        <span className="md:hidden flex flex-row gap-1 items-center">
+          listings
+        </span>
         <span>{props.listings}</span>
       </div>
       <div className="flex items-center  justify-between md:justify-center  w-full md:w-56 py-2 px-3">
-        <span className="md:hidden">floor price</span>
+        <span className="md:hidden flex flex-row gap-1 items-center">
+          floor price <img src={solanaIcon} className="h-4 w-4 bg-cover" />
+        </span>
         <span className="flex flex-row gap-1 items-center">
           {props.floorPrice}
-          <img src={solanaIcon} className="h-4 w-4 bg-cover" />
         </span>
       </div>
       <div className="flex items-center  justify-between md:justify-center  w-full md:w-56 py-2 px-3">
-        <span className="md:hidden">Vault Floor</span>
+        <span className="md:hidden flex flex-row gap-1 items-center">
+          Vault Floor <img src={solanaIcon} className="h-4 w-4 bg-cover" />
+        </span>
         <span className="flex flex-row gap-1 items-center">
           {props.vaultFloor}
-          <img src={solanaIcon} className="h-4 w-4 bg-cover" />
         </span>
       </div>
       <div className="flex items-center  justify-between md:justify-center  w-full md:w-56 py-2 px-3">
-        <span className="md:hidden">Vault Listning</span>
+        <span className="md:hidden flex flex-row gap-1 items-center">
+          Vault listing <img src={solanaIcon} className="h-4 w-4 bg-cover" />
+        </span>
         <span className="flex flex-row gap-1 items-center">
-          {props.vaultListnings}{" "}
-          <img src={solanaIcon} className="h-4 w-4 bg-cover" />
+          {props.vaultListnings}
         </span>
       </div>
       <div className="flex items-center  justify-between md:justify-center  w-full md:w-56 py-2 px-3">
-        <span className="md:hidden">TRL</span>
-        <span className="flex flex-row gap-1 items-center">
-          {props.trl} <img src={solanaIcon} className="h-4 w-4 bg-cover" />
+        <span className="md:hidden flex flex-row gap-1 items-center">
+          TRL <img src={solanaIcon} className="h-4 w-4 bg-cover" />{" "}
         </span>
+        <span className="flex flex-row gap-1 items-center">{props.trl}</span>
       </div>
       <div className="flex items-center  justify-between md:justify-center  w-full md:w-56 py-2 px-3">
-        <span className="md:hidden">TRR</span>
-        <span className="flex flex-row gap-1 items-center">
-          {props.trr} <img src={solanaIcon} className="h-4 w-4 bg-cover" />
+        <span className="md:hidden flex flex-row gap-1 items-center">
+          TRR <img src={solanaIcon} className="h-4 w-4 bg-cover" />
         </span>
+        <span className="flex flex-row gap-1 items-center">{props.trr}</span>
       </div>
       <div className="flex items-center  justify-between md:justify-center  w-full md:w-56 py-2 px-3">
-        <span className="md:hidden">Supply</span>
+        <span className="md:hidden flex flex-row gap-1 items-center">
+          Supply{" "}
+        </span>
         <span>{props.supply}</span>
       </div>
       <div className="flex items-center  justify-between md:justify-center  w-full md:w-56 py-2 px-3">
-        <span className="md:hidden">Owners</span>
+        <span className="md:hidden flex flex-row gap-1 items-center">
+          Owners
+        </span>
         <span>{props.owners}</span>
       </div>
       <div className="flex items-center  justify-between md:justify-center  w-full md:w-56 py-2 px-3">
-        <span className="md:hidden">Royalty</span>
-        <span>{props.royalty}</span>
+        <span className="md:hidden flex flex-row gap-1 items-center">
+          Royalty
+        </span>
+        <span>{props.royalty}%</span>
       </div>
       <div className="flex items-center  justify-between md:justify-center  w-full md:w-56 py-2 px-3">
-        <span className="md:hidden">Last Date</span>
+        <span className="md:hidden flex flex-row gap-1 items-center">
+          Last Date
+        </span>
         <span>{props.date}</span>
       </div>
     </div>
@@ -195,21 +207,28 @@ export default function Collection() {
           <CatogeryButton
             title={"floor price"}
             onclick={() => handleSort("floorprice")}
-          />
-
+          >
+            <img src={solanaIcon} className="h-4 w-4 bg-cover" />
+          </CatogeryButton>
           <CatogeryButton
             title={"Vault Floor"}
             onclick={() => handleSort("VaultFloor")}
-          />
-
+          >
+            <img src={solanaIcon} className="h-4 w-4 bg-cover" />
+          </CatogeryButton>
           <CatogeryButton
-            title={"Vault Listning"}
+            title={"Vault listing"}
             onclick={() => handleSort("VaultListning")}
-          />
+          >
+            <img src={solanaIcon} className="h-4 w-4 bg-cover" />
+          </CatogeryButton>
+          <CatogeryButton title={"TRL"} onclick={() => handleSort("TRL")}>
+            <img src={solanaIcon} className="h-4 w-4 bg-cover" />
+          </CatogeryButton>
 
-          <CatogeryButton title={"TRL"} onclick={() => handleSort("TRL")} />
-
-          <CatogeryButton title={"TRR"} onclick={() => handleSort("TRR")} />
+          <CatogeryButton title={"TRR"} onclick={() => handleSort("TRR")}>
+            <img src={solanaIcon} className="h-4 w-4 bg-cover" />
+          </CatogeryButton>
           <CatogeryButton
             title={"Supply"}
             onclick={() => handleSort("Supply")}
