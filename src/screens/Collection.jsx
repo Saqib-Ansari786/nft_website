@@ -195,7 +195,7 @@ export default function Collection() {
       <div className="bg-zinc-900 mt-14 rounded-xl border border-slate-600 font-bold ">
         <div className="md:flex md:flex-row md:justify-between  hidden">
           <button
-            className="w-96 flex flex-row justify-between  p-3 hover:bg-slate-700"
+            className="w-96 flex flex-row justify-between items-center  p-3 hover:bg-slate-700"
             onclick={() => handleSort("name")}
           >
             <span className="ml-2">name</span>
@@ -209,22 +209,22 @@ export default function Collection() {
             title={"Floor price"}
             onclick={() => handleSort("floorprice")}
           >
-            <img src={solanaIcon} className="h-4 w-4 bg-cover" />
-            <BsArrowDownUp size={20} />
+            <img src={solanaIcon} className="h-4 w-4 bg-cover mr-2" />
+            <BsArrowDownUp size={25} />
           </CatogeryButton>
           <CatogeryButton
             title={"Vault Floor"}
             onclick={() => handleSort("VaultFloor")}
           >
-            <img src={solanaIcon} className="h-4 w-4 bg-cover" />
-            <BsArrowDownUp size={20} />
+            <img src={solanaIcon} className="h-4 w-4 bg-cover mr-2" />
+            <BsArrowDownUp size={25} />
           </CatogeryButton>
           <CatogeryButton
             title={"Vault listing"}
             onclick={() => handleSort("VaultListning")}
           >
-            <img src={solanaIcon} className="h-4 w-4 bg-cover" />
-            <BsArrowDownUp size={20} />
+            <img src={solanaIcon} className="h-4 w-4 bg-cover mr-2" />
+            <BsArrowDownUp size={25} />
           </CatogeryButton>
           <CatogeryButton title={"TRL"} onclick={() => handleSort("TRL")}>
             <img src={solanaIcon} className="h-4 w-4 bg-cover" />
