@@ -189,8 +189,12 @@ export default function Collection() {
             />
           </div>
         </div>
-        <Detail title="Total Royal Locked" subtitle="TTL" price="789 SOL" />
-        <Detail title="Total Royal Locked" subtitle="TTL" price="540 SOL" />
+        <Detail title="Total Royal Locked" subtitle="TRL" price="789 SOL" />
+        <Detail
+          title="Total Royalties Released"
+          subtitle="TRR"
+          price="540 SOL"
+        />
       </div>
       <div className="bg-zinc-900 mt-14 rounded-xl border border-slate-600 font-bold ">
         <div className="md:flex md:flex-row md:justify-between  hidden">
