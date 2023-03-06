@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import { BiFilterAlt, BiSearch } from "react-icons/bi";
 import Detail from "../components/detail";
 import solanaIcon from "../assets/solanaIcon.png";
+import { BsArrowDownUp } from "react-icons/bs";
 
 const CatogeryButton = ({ title, children, onclick }) => {
   return (
     <button
       onClick={onclick}
-      className="border-l  p-3 flex flex-row justify-between  w-56   border-slate-700 hover:bg-slate-700"
+      className="border-l  p-3 flex flex-row justify-between items-center   w-60   border-slate-700 hover:bg-slate-700"
     >
       <span>{title}</span>
       {children}
@@ -57,7 +58,7 @@ const DetailCollection = (props) => {
       </div>
       <div className="flex items-center  justify-between md:justify-center  w-full md:w-56 py-2 px-3">
         <span className="md:hidden flex flex-row gap-1 items-center">
-          TRL <img src={solanaIcon} className="h-4 w-4 bg-cover" />{" "}
+          TRL <img src={solanaIcon} className="h-4 w-4 bg-cover" />
         </span>
         <span className="flex flex-row gap-1 items-center">{props.trl}</span>
       </div>
@@ -205,29 +206,34 @@ export default function Collection() {
             onclick={() => handleSort("listings")}
           />
           <CatogeryButton
-            title={"floor price"}
+            title={"Floor price"}
             onclick={() => handleSort("floorprice")}
           >
             <img src={solanaIcon} className="h-4 w-4 bg-cover" />
+            <BsArrowDownUp size={20} />
           </CatogeryButton>
           <CatogeryButton
             title={"Vault Floor"}
             onclick={() => handleSort("VaultFloor")}
           >
             <img src={solanaIcon} className="h-4 w-4 bg-cover" />
+            <BsArrowDownUp size={20} />
           </CatogeryButton>
           <CatogeryButton
             title={"Vault listing"}
             onclick={() => handleSort("VaultListning")}
           >
             <img src={solanaIcon} className="h-4 w-4 bg-cover" />
+            <BsArrowDownUp size={20} />
           </CatogeryButton>
           <CatogeryButton title={"TRL"} onclick={() => handleSort("TRL")}>
             <img src={solanaIcon} className="h-4 w-4 bg-cover" />
+            <BsArrowDownUp size={20} />
           </CatogeryButton>
 
           <CatogeryButton title={"TRR"} onclick={() => handleSort("TRR")}>
             <img src={solanaIcon} className="h-4 w-4 bg-cover" />
+            <BsArrowDownUp size={20} />
           </CatogeryButton>
           <CatogeryButton
             title={"Supply"}
