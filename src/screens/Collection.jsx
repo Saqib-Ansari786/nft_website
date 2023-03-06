@@ -189,7 +189,7 @@ export default function Collection() {
             />
           </div>
         </div>
-        <Detail title="Total Royal Locked" subtitle="TRL" price="789 SOL" />
+        <Detail title="Total Royalties Locked" subtitle="TRL" price="789 SOL" />
         <Detail
           title="Total Royalties Released"
           subtitle="TRR"
