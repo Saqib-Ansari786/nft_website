@@ -68,29 +68,12 @@ const DetailCollection = (props) => {
         </span>
         <span className="flex flex-row gap-1 items-center">{props.trr}</span>
       </div>
-      <div className="flex items-center  justify-between md:justify-center  w-full md:w-56 py-2 px-3">
-        <span className="md:hidden flex flex-row gap-1 items-center">
-          Supply{" "}
-        </span>
-        <span>{props.supply}</span>
-      </div>
-      <div className="flex items-center  justify-between md:justify-center  w-full md:w-56 py-2 px-3">
-        <span className="md:hidden flex flex-row gap-1 items-center">
-          Owners
-        </span>
-        <span>{props.owners}</span>
-      </div>
+
       <div className="flex items-center  justify-between md:justify-center  w-full md:w-56 py-2 px-3">
         <span className="md:hidden flex flex-row gap-1 items-center">
           Royalty
         </span>
         <span>{props.royalty}%</span>
-      </div>
-      <div className="flex items-center  justify-between md:justify-center  w-full md:w-56 py-2 px-3">
-        <span className="md:hidden flex flex-row gap-1 items-center">
-          Last Date
-        </span>
-        <span>{props.date}</span>
       </div>
     </div>
   );
@@ -214,46 +197,34 @@ export default function Collection() {
             onclick={() => handleSort("floorprice")}
           >
             <img src={solanaIcon} className="h-4 w-4 bg-cover mr-2" />
-            <BsArrowDownUp size={25} />
+            <BsArrowDownUp size={15} />
           </CatogeryButton>
           <CatogeryButton
             title={"Vault Floor"}
             onclick={() => handleSort("VaultFloor")}
           >
             <img src={solanaIcon} className="h-4 w-4 bg-cover mr-2" />
-            <BsArrowDownUp size={25} />
+            <BsArrowDownUp size={15} />
           </CatogeryButton>
           <CatogeryButton
             title={"Vault listing"}
             onclick={() => handleSort("VaultListning")}
           >
             <img src={solanaIcon} className="h-4 w-4 bg-cover mr-2" />
-            <BsArrowDownUp size={25} />
+            <BsArrowDownUp size={15} />
           </CatogeryButton>
           <CatogeryButton title={"TRL"} onclick={() => handleSort("TRL")}>
             <img src={solanaIcon} className="h-4 w-4 bg-cover" />
-            <BsArrowDownUp size={20} />
+            <BsArrowDownUp size={15} />
           </CatogeryButton>
 
           <CatogeryButton title={"TRR"} onclick={() => handleSort("TRR")}>
             <img src={solanaIcon} className="h-4 w-4 bg-cover" />
-            <BsArrowDownUp size={20} />
+            <BsArrowDownUp size={15} />
           </CatogeryButton>
-          <CatogeryButton
-            title={"Supply"}
-            onclick={() => handleSort("Supply")}
-          />
-          <CatogeryButton
-            title={"Owners"}
-            onclick={() => handleSort("Owners")}
-          />
           <CatogeryButton
             title={"Royalty"}
             onclick={() => handleSort("Royalty")}
-          />
-          <CatogeryButton
-            title={"Last Sale"}
-            onclick={() => handleSort("LastSale")}
           />
         </div>
       </div>
@@ -266,10 +237,7 @@ export default function Collection() {
           vaultListnings={item.vaultListings}
           trl={item.TRL}
           trr={item.TRR}
-          supply={item.supply}
-          owners={item.owners}
           royalty={item.royalty}
-          date={item.lastSale}
         />
       ))}
     </div>
